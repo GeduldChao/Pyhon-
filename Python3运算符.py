@@ -26,4 +26,17 @@ if(order1 in numberList):
 if(order2 not in numberList):
 	print("order2不存在列表numberList中")
 # 身份运算符：用于比较两个对象的存储单元
-
+	# is判断两个标识符是不是引用自同一个对象
+	# is not判断两个标识符是不是引用自不同对象
+# id()函数用于获取对象内存地址
+a = 20
+b = 20
+if(a is b):
+	print("a和b有相同的标识")
+else:
+	print("a和b没有相同的标识")
+if(id(a) == id(b)):
+	print("a和b有相同的标识")
+else:
+	print("a和b没有相同的标识")
+# is与==的区别：is用于判断两个变量引用对象是否为同一个，==用于判断引用变量的值是否相等。
