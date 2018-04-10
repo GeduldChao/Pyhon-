@@ -26,11 +26,11 @@ def fibonacci(n):
 		a,b = b,a+b
 		counter += 1
 f = fibonacci(10)
-while True:
-	try:
-		print(next(f),end=", ")
-	except StopIteration:
-		sys.exit()
+# while True:
+try:
+	print(next(f))
+except StopIteration:
+	sys.exit()
 # 定义一个函数
 '''
 1.函数代码块以def关键字开头，后接函数标识符名称和圆括号()。
@@ -40,6 +40,13 @@ while True:
 5.return[表达式]结束函数，选择性的返回一个值给调用方。不带return表达式的相当于返回None。
 '''
 # 参数分为：必需参数，关键字参数，默认参数，不定长参数
+# 不定长参数：加了星号(*)的变量名会存放所有未命名的变量参数。如果在函数调用时没有指定参数，他就是一个空元组。
+def test(arg1, *arg2):
+	print(arg1)
+	for i in arg2:
+		print(i)
+test(10)
+test(11, 12, 13)
 # 匿名函数：使用lambda创建匿名函数。
 sum = lambda a,b:a+b;
-print(sum(10,20)) # 没反应
+print(sum(10,20))
