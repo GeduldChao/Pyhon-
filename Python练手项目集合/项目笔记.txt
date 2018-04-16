@@ -1,0 +1,7 @@
+1. char = keyboard.getch()
+   getch()：直接读取用户的单个字符输入。15:13 2018/4/12    
+2. 打开任意一个python文件   15:08 2018/4/13
+   a.导入subprocess b.data=subprocess.Popen('python '+full_path, stdout = subprocess.PIPE, shell = True).stdout.read() c.打印data即可 
+   d.full_path是python文件路径  
+3. 获取当前时间 15:08 2018/4/13
+   a.导入datetime b.datetime.datetime.now()                                         
